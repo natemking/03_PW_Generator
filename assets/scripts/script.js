@@ -10,8 +10,16 @@ function writePassword() {
 
 }
 
+// 1. Prompt user for password length. Must be 8-128 characters
+// 2. Confirm for lowercase characters in password
+// 3. Confirm for uppercase characters in password
+// 4. Confirm for numerical digits in password
+// 5. Confirm for special characters
+// 6. At least one of the character types above must be selected to proceed
+// 7. When all prompts are selected a password will be generated. 
+
 generatePassword(){
-  
+
 }
 
 // Add event listener to generate button
