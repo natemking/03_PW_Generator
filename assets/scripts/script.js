@@ -18,8 +18,8 @@ function writePassword() {
 // 6. At least one of the character types above must be selected to proceed
 // 7. When all prompts are selected a password will be generated. 
 
-generatePassword(){
-
+function generatePassword() {
+  prompt("Please choose a password length? Minimum 8, Maximum 128 characters");
 }
 
 // Add event listener to generate button
