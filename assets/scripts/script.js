@@ -46,18 +46,41 @@ function generatePassword() {
     let upAlpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     let numbers = "0123456789"
     let sym = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~" ;
+    let lowUp = lowAlpha + upAlpha;
+    let lowNum = lowAlpha + numbers;
+    let lowChar = lowAlpha + sym;
+    let lowUpNum = lowAlpha + upAlpha + numbers;
+    let lowUpChar = lowAlpha + upAlpha + sym;
+    let lowNumChar = lowAlpha + numbers + sym;
+    let all = lowAlpha + upAlpha + numbers + sym;
+    let upNum = upAlpha + numbers;
+    let upChar = upAlpha + sym;
+    let upNumChar = upAlpha + numbers + sym;
+    let numChar = numbers + sym;
+
+
     //variables options based on user choices
     let onlyLow = !upper && !nums && !spChars;
     let onlyUp = !lower && !nums && !spChars;
     let onlyNums = !lower && !upper && !spChars;
     let onlyChars = !lower && !upper && !nums;
-    
 
     //if only lowercase letters are chosen
     if (lower && onlyLow){
       //select a random lowercase letter and push it to storage variable
       password.push(lowAlpha[Math.floor(Math.random()*lowAlpha.length)]);
-    //if only uppercase letters are chosen
+    //if only lowercase & uppercase letters are chosen
+    }else if (lower && upper && !nums && !spChars) {
+      //select a random character  and push it to storage variable
+     password.push(lowUp[Math.floor(Math.random()*lowUp.length)]);
+     //if only lowercase & numbers are chosen
+    }else if (lower && nums && !upper && !spChars) {
+      //select a random character  and push it to storage variable
+     password.push(lowNum[Math.floor(Math.random()*lowNum.length)]);
+     //if only lowercase & special characters are chosen
+    }else if (lower && spChars && !upper && !nums) {
+      //select a random character  and push it to storage variable
+     password.push(lowChar[Math.floor(Math.random()*lowChar.length)]);
     }else if (upper && onlyUp){
       //select a random uppercase letter and push it to storage variable
       password.push(upAlpha[Math.floor(Math.random()*upAlpha.length)]);
