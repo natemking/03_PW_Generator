@@ -22,20 +22,29 @@ function generatePassword() {
     alert("Please try again and choose a number between 8 and 128");
     return;
   }
-  // 2. Confirm for lowercase characters in password
+  //Confirm for lowercase characters in password
   let lower = confirm("Would you like you password to contain lowercase letters?");
-  // 3. Confirm for uppercase characters in password
-  let upper = confirm("Would you like you password to contain lowercase letters?");
-  // 4. Confirm for numerical digits in password
+  //Confirm for uppercase characters in password
+  let upper = confirm("Would you like you password to contain uppercase letters?");
+  //Confirm for numerical digits in password
   let nums = confirm("Would you like you password to contain numbers?");
-  // 5. Confirm for special characters
-  let spChars = confirm("Would you like you password to contain special character?");
+  //Confirm for special characters
+  let spChars = confirm("Would you like you password to contain special characters?");
   //if no valid character are selected the user is alerted and function ceases running
   if (!lower && !upper && !nums && !spChars){
     alert("Please choose at least on valid character type!");
     return;
+    }
+  // loop to generate the password in accordance to selected lengths. 
+  for (let i = 0; i < pwLength; i++){
+    if (lower){
+      //select a random lowercase letter
+      console.log(String.fromCharCode(Math.floor(Math.random()*26)+97));
+    }else if (upper){
+      //select a random uppercase letter
+      console.log(String.fromCharCode(Math.floor(Math.random()*26)+65));
+    }
   }
-
 }
 
 // Add event listener to generate button
