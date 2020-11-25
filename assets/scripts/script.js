@@ -14,14 +14,14 @@ function writePassword() {
 
 function generatePassword() {
   //Prompt user for password length. Must be 8-128 characters. 
-  let pwLength = parseInt(prompt("Please choose a password length? Minimum 8, Maximum 128 characters"));
+  let pwLength = parseInt(prompt("Please choose a password length between 8 and 128 characters?"));
   //if user chooses a number outside of the required range they are alerted and the function ceases running
   if (pwLength < 8 || pwLength > 128) {
     alert("Please try again and choose a number between 8 and 128");
     return "Try again";
   //if user chooses a letter they are alerted and the function ceases running.
   }else if (!Number.isInteger(pwLength)){
-    alert("Please choose a number.");
+    alert("Please choose a number");
     return "Try Again";
   }
 
