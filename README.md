@@ -21,3 +21,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 <!-- 
 stop a function early 
 https://stackoverflow.com/questions/3330193/early-exit-from-function -->
+
+<!-- 
+Number.isinteger
+https://www.w3schools.com/jsref/jsref_isinteger.asp#:~:text=The%20Number.,Otherwise%20it%20returns%20false. -->
