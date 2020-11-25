@@ -35,11 +35,14 @@ function generatePassword() {
     alert("Please choose at least on valid character type!");
     return;
     }
+
+  //variable to store the random results in
+  var password = []; 
   // loop to generate the password in accordance to selected lengths. 
   for (let i = 0; i < pwLength; i++){
 
     //variables for character options
-    let sym= " !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~" ;
+    let sym= "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~" ;
     //variables options based on user choices
     let onlyLow = !upper && !nums && !spChars;
     let onlyUp = !lower && !nums && !spChars;
@@ -50,21 +53,22 @@ function generatePassword() {
     //if only lowercase letters are chosen
     if (lower && onlyLow){
       //select a random lowercase letter
-      console.log(String.fromCharCode(Math.floor(Math.random()*26)+97));
+      password.push(String.fromCharCode(Math.floor(Math.random()*26)+97));
     //if only uppercase letters are chosen
     }else if (upper && onlyUp){
       //select a random uppercase letter
-      console.log(String.fromCharCode(Math.floor(Math.random()*26)+65));
+      password.push(String.fromCharCode(Math.floor(Math.random()*26)+65));
      //if only numbers are chosen
     }else if (nums & onlyNums){
       //select a random number
-      console.log(String.fromCharCode(Math.floor(Math.random()*10)+48));
+      password.push(String.fromCharCode(Math.floor(Math.random()*10)+48));
       //if only special characters are chosen 
     }else if (spChars && onlyChars) {
       //select a random
-      console.log(sym[Math.floor(Math.random()*sym.length)]);
+     password.push(sym[Math.floor(Math.random()*sym.length)]);
     }
-  }
+  //returns the password variable then returns array as a string 
+  }return password.join('');
 }
 
 // Add event listener to generate button
