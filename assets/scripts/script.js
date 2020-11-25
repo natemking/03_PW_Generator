@@ -9,10 +9,8 @@ function writePassword() {
   passwordText.value = password;
 
 }
-
-
-// 6. At least one of the character types above must be selected to proceed
-// 7. When all prompts are selected a password will be generated. 
+//*** ALL CODE BELOW ADDED BY NATE KING ***//
+//-----------------------------------------//
 
 function generatePassword() {
   //Prompt user for password length. Must be 8-128 characters. 
