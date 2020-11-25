@@ -16,7 +16,7 @@ function generatePassword() {
   //Prompt user for password length. Must be 8-128 characters. 
   let pwLength = prompt("Please choose a password length? Minimum 8, Maximum 128 characters");
   //if user chooses a number outside of the required range they are alerted and the function ceases running
-  if (pwLength < 8 || pwLength > 128){
+  if (pwLength < 8 || pwLength > 128) {
     alert("Please try again and choose a number between 8 and 128");
     return "Try again";
   }
@@ -29,21 +29,21 @@ function generatePassword() {
   //Confirm for special characters
   let spChars = confirm("Would you like your password to contain special characters?");
   //if no valid character are selected the user is alerted and function ceases running
-  if (!lower && !upper && !nums && !spChars){
+  if (!lower && !upper && !nums && !spChars) {
     alert("Please choose at least one valid character type!");
     return "Try again";
-    }
+  }
 
   //variable to store the random results in
-  var password = []; 
-  // loop to generate the password in accordance to selected lengths. 
-  for (let i = 0; i < pwLength; i++){
+  var password = [];
+  // for loop to generate the password in accordance to defined user length 
+  for (let i = 0; i < pwLength; i++) {
 
     //variables for character options]
     let lowAlpha = "abcdefghijklmnopqrstuvwxyz"
     let upAlpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     let numbers = "0123456789"
-    let sym = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~" ;
+    let sym = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
     let lowUp = lowAlpha + upAlpha;
     let lowNum = lowAlpha + numbers;
     let lowChar = lowAlpha + sym;
@@ -57,68 +57,68 @@ function generatePassword() {
     let numChar = numbers + sym;
 
     //if only lowercase letters are chosen
-    if (lower && !upper && !nums && !spChars){
+    if (lower && !upper && !nums && !spChars) {
       //select a random lowercase letter and push it to storage variable
-      password.push(lowAlpha[Math.floor(Math.random()*lowAlpha.length)]);
-    //if only lowercase & uppercase letters are chosen
-    }else if (lower && upper && !nums && !spChars) {
+      password.push(lowAlpha[Math.floor(Math.random() * lowAlpha.length)]);
+      //if only lowercase & uppercase letters are chosen
+    } else if (lower && upper && !nums && !spChars) {
       //select a random character and push it to storage variable
-     password.push(lowUp[Math.floor(Math.random()*lowUp.length)]);
-     //if only lowercase & numbers are chosen
-    }else if (lower && !upper && nums && !spChars) {
+      password.push(lowUp[Math.floor(Math.random() * lowUp.length)]);
+      //if only lowercase & numbers are chosen
+    } else if (lower && !upper && nums && !spChars) {
       //select a random character and push it to storage variable
-     password.push(lowNum[Math.floor(Math.random()*lowNum.length)]);
-     //if only lowercase & special characters are chosen
-    }else if (lower && !upper && !nums && spChars) {
+      password.push(lowNum[Math.floor(Math.random() * lowNum.length)]);
+      //if only lowercase & special characters are chosen
+    } else if (lower && !upper && !nums && spChars) {
       //select a random character and push it to storage variable
-     password.push(lowChar[Math.floor(Math.random()*lowChar.length)]);
-     //if only lowercase & uppercase & numbers are chosen
-    }else if (lower && upper && nums && !spChars) {
+      password.push(lowChar[Math.floor(Math.random() * lowChar.length)]);
+      //if only lowercase & uppercase & numbers are chosen
+    } else if (lower && upper && nums && !spChars) {
       //select a random character  and push it to storage variable
-     password.push(lowUpNum[Math.floor(Math.random()*lowUpNum.length)]);
-    //if only lowercase & uppercase & special characters are chosen
-    }else if (lower && upper && !nums && spChars) {
+      password.push(lowUpNum[Math.floor(Math.random() * lowUpNum.length)]);
+      //if only lowercase & uppercase & special characters are chosen
+    } else if (lower && upper && !nums && spChars) {
       //select a random character  and push it to storage variable
-     password.push(lowUpChar[Math.floor(Math.random()*lowUpChar.length)]);
-    //if only lowercase & numbers & special characters are chosen
-    }else if (lower && !upper && nums && spChars) {
+      password.push(lowUpChar[Math.floor(Math.random() * lowUpChar.length)]);
+      //if only lowercase & numbers & special characters are chosen
+    } else if (lower && !upper && nums && spChars) {
       //select a random character  and push it to storage variable
-     password.push(lowNumChar[Math.floor(Math.random()*lowNumChar.length)]);
-    //if all options are chose
-    }else if (lower && upper && nums && spChars) {
+      password.push(lowNumChar[Math.floor(Math.random() * lowNumChar.length)]);
+      //if all options are chose
+    } else if (lower && upper && nums && spChars) {
       //select a random character  and push it to storage variable
-     password.push(all[Math.floor(Math.random()*all.length)]);
-    //if only uppercase letters are chosen
-    }else if (!lower && upper && !nums && !spChars){
+      password.push(all[Math.floor(Math.random() * all.length)]);
+      //if only uppercase letters are chosen
+    } else if (!lower && upper && !nums && !spChars) {
       //select a random uppercase letter and push it to storage variable
-      password.push(upAlpha[Math.floor(Math.random()*upAlpha.length)]);
-    //if only uppercase & numbers are chosen
-    }else if (!lower && upper && nums && !spChars) {
+      password.push(upAlpha[Math.floor(Math.random() * upAlpha.length)]);
+      //if only uppercase & numbers are chosen
+    } else if (!lower && upper && nums && !spChars) {
       //select a random character  and push it to storage variable
-     password.push(upNum[Math.floor(Math.random()*upNum.length)]);
-    //if only uppercase & special characters are chosen
-    }else if (!lower && upper && !nums && spChars) {
+      password.push(upNum[Math.floor(Math.random() * upNum.length)]);
+      //if only uppercase & special characters are chosen
+    } else if (!lower && upper && !nums && spChars) {
       //select a random character  and push it to storage variable
-     password.push(upChar[Math.floor(Math.random()*upChar.length)]);
-    //if only uppercase & numbers & special characters are chosen
-    }else if (!lower && upper && nums && spChars) {
+      password.push(upChar[Math.floor(Math.random() * upChar.length)]);
+      //if only uppercase & numbers & special characters are chosen
+    } else if (!lower && upper && nums && spChars) {
       //select a random character  and push it to storage variable
-     password.push(upNumChar[Math.floor(Math.random()*upNumChar.length)]);
-    //if only numbers are chosen
-    }else if (!lower && !upper && nums && !spChars){
+      password.push(upNumChar[Math.floor(Math.random() * upNumChar.length)]);
+      //if only numbers are chosen
+    } else if (!lower && !upper && nums && !spChars) {
       //select a random number and push it to storage variable
-      password.push(numbers[Math.floor(Math.random()*numbers.length)]);
-    //if only numbers & special characters are chosen
-    }else if (!lower && !upper && nums && spChars) {
+      password.push(numbers[Math.floor(Math.random() * numbers.length)]);
+      //if only numbers & special characters are chosen
+    } else if (!lower && !upper && nums && spChars) {
       //select a random character and push it to storage variable
-     password.push(numChar[Math.floor(Math.random()*numChar.length)]);
-    //if only special characters are chosen 
-    }else if (!lower && !upper && !nums && spChars) {
+      password.push(numChar[Math.floor(Math.random() * numChar.length)]);
+      //if only special characters are chosen 
+    } else if (!lower && !upper && !nums && spChars) {
       //select a random character and push it to storage variable
-     password.push(sym[Math.floor(Math.random()*sym.length)]);
+      password.push(sym[Math.floor(Math.random() * sym.length)]);
     }
-  //returns the password variable then returns array as a string 
-  }return password.join('');
+    //returns the password variable and converts array into a string 
+  } return password.join('');
 }
 
 // Add event listener to generate button
