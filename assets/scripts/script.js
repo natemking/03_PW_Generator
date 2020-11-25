@@ -15,8 +15,13 @@ function writePassword() {
 // 7. When all prompts are selected a password will be generated. 
 
 function generatePassword() {
-  // 1. Prompt user for password length. Must be 8-128 characters. 
+  //Prompt user for password length. Must be 8-128 characters. 
   let pwLength = prompt("Please choose a password length? Minimum 8, Maximum 128 characters");
+  //if user chooses a number outside of the required range they are alerted and the function ceases running
+  if (pwLength < 8 || pwLength > 128){
+    alert("Please try again and choose a number between 8 and 128");
+    return;
+  }
   // 2. Confirm for lowercase characters in password
   let lower = confirm("Would you like you password to contain lowercase letters?");
   // 3. Confirm for uppercase characters in password
@@ -25,7 +30,11 @@ function generatePassword() {
   let nums = confirm("Would you like you password to contain numbers?");
   // 5. Confirm for special characters
   let spChars = confirm("Would you like you password to contain special character?");
-  
+  //if no valid character are selected the user is alerted and function ceases running
+  if (!lower && !upper && !nums && !spChars){
+    alert("Please choose at least on valid character type!");
+    return;
+  }
 
 }
 
