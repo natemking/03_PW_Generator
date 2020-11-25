@@ -37,12 +37,25 @@ function generatePassword() {
     }
   // loop to generate the password in accordance to selected lengths. 
   for (let i = 0; i < pwLength; i++){
-    if (lower){
+
+    //variables options based on user choices
+    let noLow = !upper && !nums && !spChars;
+    let noUp = !lower && !nums && !spChars;
+    let noNums = !lower && !upper && !spChars;
+    let noSpChars = !lower && !upper && !nums;
+
+    //if only lowercase letters are chosen
+    if (lower && noLow){
       //select a random lowercase letter
       console.log(String.fromCharCode(Math.floor(Math.random()*26)+97));
-    }else if (upper){
+    //if only uppercase letters are chosen
+    }else if (upper && noUp){
       //select a random uppercase letter
       console.log(String.fromCharCode(Math.floor(Math.random()*26)+65));
+     //if only numbers are chosen
+    }else if (nums & noNums){
+      //select a random number
+      console.log(String.fromCharCode(Math.floor(Math.random()*10)+48));
     }
   }
 }
