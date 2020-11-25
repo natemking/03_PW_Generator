@@ -1,5 +1,6 @@
-# 03_PW_Generator
-Homework Assignment #3 - Javascript: Password Generator
+# Password Generator
+## Homework Assignment #3 - Javascript: Password Generator
+http://www.natemking.dev/03_PW_Generator/
 
 ## Description
 

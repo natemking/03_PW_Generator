@@ -13,7 +13,7 @@ body,
 }
 
 body {
-  font-family: sans-serif;
+  font-family: 'Exo 2', sans-serif;
   background-color: #f9fbfd;
 }
 
@@ -40,6 +40,7 @@ header {
   margin: 0 auto;
   max-width: 800px;
   padding: 30px 40px;
+  /* text-align: center; */
 }
 
 .card-header::after {
@@ -116,6 +117,8 @@ button[disabled] {
   border-radius: 6px;
   resize: none;
   overflow: hidden;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 100;
 }
 
 @media (max-width: 690px) {
