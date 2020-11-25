@@ -41,27 +41,27 @@ function generatePassword() {
     //variables for character options
     let sym= " !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~" ;
     //variables options based on user choices
-    let noLow = !upper && !nums && !spChars;
-    let noUp = !lower && !nums && !spChars;
-    let noNums = !lower && !upper && !spChars;
-    let noSpChars = !lower && !upper && !nums;
+    let onlyLow = !upper && !nums && !spChars;
+    let onlyUp = !lower && !nums && !spChars;
+    let onlyNums = !lower && !upper && !spChars;
+    let onlyChars = !lower && !upper && !nums;
     
 
     //if only lowercase letters are chosen
-    if (lower && noLow){
+    if (lower && onlyLow){
       //select a random lowercase letter
       console.log(String.fromCharCode(Math.floor(Math.random()*26)+97));
     //if only uppercase letters are chosen
-    }else if (upper && noUp){
+    }else if (upper && onlyUp){
       //select a random uppercase letter
       console.log(String.fromCharCode(Math.floor(Math.random()*26)+65));
      //if only numbers are chosen
-    }else if (nums & noNums){
+    }else if (nums & onlyNums){
       //select a random number
       console.log(String.fromCharCode(Math.floor(Math.random()*10)+48));
       //if only special characters are chosen 
-    }else if (spChars && noSpChars) {
-      //select a random special character
+    }else if (spChars && onlyChars) {
+      //select a random
       console.log(sym[Math.floor(Math.random()*sym.length)]);
     }
   }
