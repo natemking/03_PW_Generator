@@ -41,8 +41,11 @@ function generatePassword() {
   // loop to generate the password in accordance to selected lengths. 
   for (let i = 0; i < pwLength; i++){
 
-    //variables for character options
-    let sym= "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~" ;
+    //variables for character options]
+    let lowAlpha = "abcdefghijklmnopqrstuvwxyz"
+    let upAlpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    let numbers = "0123456789"
+    let sym = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~" ;
     //variables options based on user choices
     let onlyLow = !upper && !nums && !spChars;
     let onlyUp = !lower && !nums && !spChars;
@@ -52,19 +55,19 @@ function generatePassword() {
 
     //if only lowercase letters are chosen
     if (lower && onlyLow){
-      //select a random lowercase letter
-      password.push(String.fromCharCode(Math.floor(Math.random()*26)+97));
+      //select a random lowercase letter and push it to storage variable
+      password.push(lowAlpha[Math.floor(Math.random()*lowAlpha.length)]);
     //if only uppercase letters are chosen
     }else if (upper && onlyUp){
-      //select a random uppercase letter
-      password.push(String.fromCharCode(Math.floor(Math.random()*26)+65));
-     //if only numbers are chosen
+      //select a random uppercase letter and push it to storage variable
+      password.push(upAlpha[Math.floor(Math.random()*upAlpha.length)]);
+    //if only numbers are chosen
     }else if (nums & onlyNums){
-      //select a random number
-      password.push(String.fromCharCode(Math.floor(Math.random()*10)+48));
-      //if only special characters are chosen 
+      //select a random number  and push it to storage variable
+      password.push(numbers[Math.floor(Math.random()*numbers.length)]);
+    //if only special characters are chosen 
     }else if (spChars && onlyChars) {
-      //select a random
+      //select a random character  and push it to storage variable
      password.push(sym[Math.floor(Math.random()*sym.length)]);
     }
   //returns the password variable then returns array as a string 
