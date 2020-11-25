@@ -38,11 +38,14 @@ function generatePassword() {
   // loop to generate the password in accordance to selected lengths. 
   for (let i = 0; i < pwLength; i++){
 
+    //variables for character options
+    let sym= " !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~" ;
     //variables options based on user choices
     let noLow = !upper && !nums && !spChars;
     let noUp = !lower && !nums && !spChars;
     let noNums = !lower && !upper && !spChars;
     let noSpChars = !lower && !upper && !nums;
+    
 
     //if only lowercase letters are chosen
     if (lower && noLow){
@@ -56,6 +59,10 @@ function generatePassword() {
     }else if (nums & noNums){
       //select a random number
       console.log(String.fromCharCode(Math.floor(Math.random()*10)+48));
+      //if only special characters are chosen 
+    }else if (spChars && noSpChars) {
+      //select a random special character
+      console.log(sym[Math.floor(Math.random()*sym.length)]);
     }
   }
 }
