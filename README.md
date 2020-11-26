@@ -29,3 +29,6 @@ https://stackoverflow.com/questions/3330193/early-exit-from-function -->
 <!-- 
 Number.isinteger
 https://www.w3schools.com/jsref/jsref_isinteger.asp#:~:text=The%20Number.,Otherwise%20it%20returns%20false. -->
+
+
+<!-- https://stackoverflow.com/questions/12699210/background-square-with-one-side-at-an-angle -->
