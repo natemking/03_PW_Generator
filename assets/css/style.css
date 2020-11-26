@@ -154,20 +154,24 @@ button[disabled] {
   border-right: 40px solid transparent;
 }
 
-@media (max-width: 690px) {
-
+@media (max-width: 768px) {
   .card {
     border-bottom: 30px solid black;
     border-radius: 20px;
+    padding: 30px 10px 20px 10px;
+    margin: 0 auto;
+    height: 32rem;
   }
   
   .card-header h2{
+    text-align: center;
     font-size: 4vw;
   }
 
   .btn {
     font-size: 1rem;
-    margin: 16px 0px 0px 0px;
+    /* margin: 16px 0px 0px 0px; */
+    margin-top: 6rem;
     padding: 10px 15px;
   }
 
@@ -183,5 +187,11 @@ button[disabled] {
 @media (max-width: 500px) {
   .btn {
     font-size: 0.8rem;
+  }
+}
+
+@media (max-height: 415px){
+  .btn {
+      margin-top: 4rem;
   }
 }
