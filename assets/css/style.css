@@ -24,6 +24,7 @@ body {
   padding-left: 20px;
   padding-right: 20px;
   margin: 0 auto;
+  
 }
 
 header {
@@ -34,7 +35,6 @@ header {
 }
 
 .card {
-  /* background-color: hsl(0, 0%, 100%); */
   background-color: hsl(208, 100%, 98%);
   border: black solid 30px;
   border-bottom: 20px solid black;
@@ -45,11 +45,9 @@ header {
   padding: 50px 60px;
   color: hsl(206, 17%, 28%);
   font-size: 18px;
+  box-shadow: 0 0 10px #696969;
+  position: relative;
 }
-
-/* .card-header h2{
-  font-size: 4vw;
-} */
 
 .card-header::after {
   content: " ";
@@ -106,6 +104,10 @@ button[disabled] {
   float: right;
 }
 
+.ipad-Button{
+  visibility: hidden;
+}
+
 #password {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -136,6 +138,7 @@ button[disabled] {
   background-color: #c5ced7;
   border-radius: 2px;
   position: relative;
+  box-shadow: 0 0 10px #696969;
 }
 .box1-sm {
   height: 15px;
@@ -182,6 +185,18 @@ button[disabled] {
 
   .mac-bottom {
     visibility: hidden;
+  }
+
+  .ipad-Button{
+    visibility: visible;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #080808;
+    border: 1px solid #303030;
+    position: absolute;
+    left: 47%;
+    bottom: -5%;
   }
 }
 
