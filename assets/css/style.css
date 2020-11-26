@@ -34,7 +34,8 @@ header {
 }
 
 .card {
-  background-color: hsl(0, 0%, 100%);
+  /* background-color: hsl(0, 0%, 100%); */
+  background-color: hsl(208, 100%, 98%);
   border: black solid 30px;
   border-bottom: 20px solid black;
   border-top-left-radius: 20px;
