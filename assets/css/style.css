@@ -10,6 +10,7 @@ body,
   height: 100%;
   margin: 0;
   padding: 0;
+  background-image: url("../../assets/images/white-waves.png");
 }
 
 body {
@@ -38,13 +39,11 @@ header {
   border-bottom: 20px solid black;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
-  color: hsl(206, 17%, 28%);
-  font-size: 18px;
   margin: 3% 10% 0 10%;
   max-width: 1070px;
   padding: 50px 60px;
-  /* text-align: center; */
+  color: hsl(206, 17%, 28%);
+  font-size: 18px;
 }
 
 /* .card-header h2{
@@ -152,6 +151,7 @@ button[disabled] {
   border-top: 20px solid #7e858f;
   border-left: 40px solid transparent;
   border-right: 40px solid transparent;
+  
 }
 
 @media (max-width: 768px) {
