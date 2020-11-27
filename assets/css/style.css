@@ -55,13 +55,13 @@ header {
   align-items: baseline;
 }
 
-#lock {
+#lock-icon {
   margin-right: 5px;
   vertical-align: -1px;
   opacity: .3;
 }
 
-.copy-Btn {
+#copy-btn {
   border: 1px solid rgba(0, 0, 0, .3) ;
   border-radius: 5px;
   font-family: inherit;
@@ -70,6 +70,7 @@ header {
   font-size: 16px;
   font-weight: 200;
   font-style: italic;
+  visibility: hidden;
 }
 
 #copy-icon {
@@ -78,7 +79,7 @@ header {
   opacity: .3;
 }
 
-.copy-Btn:hover{
+#copy-btn:hover{
   cursor: pointer;
   box-shadow: 0 0 1px #808080;
 }

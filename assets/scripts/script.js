@@ -1,6 +1,6 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-var closeLock = document.getElementById("icon");
+var closeLock = document.getElementById("lock-icon");
 
 //*** checkIcon function added by Nate King ***//
 //Check to see is the icon is a closed lock. If it is closed, it is changed to an open lock right before the writePassword function is called.
@@ -21,14 +21,13 @@ function writePassword() {
   //*** ALL CODE BELOW ADDED BY NATE KING ***//
   //-----------------------------------------//
 
-  //If a pw is actually generated the FontAwesome icon is toggled to be a closed lock otherwise is stays open until a proper pw is generated. 
+  //If a pw is generated the FA lock icon is toggled to be closed otherwise is stays open until a proper pw is generated, and the copy button is made visible.  
   if (passwordText.value !== "Try Again"){
     closeLock.classList.toggle("fa-unlock-alt");
+    document.getElementById("copy-btn").style.visibility="visible";
   }
-
 }
-
-
+//function to generate random password based on user input
 function generatePassword() {
   //Prompt user for password length. Must be 8-128 characters. 
   let pwLength = parseInt(prompt("Please choose a password length between 8 and 128 characters?"));
@@ -143,23 +142,25 @@ function generatePassword() {
   } return password.join('');
 }
 
-// Add event listener to generate button. Checks for icon status then pauses before running the writePassword function. Timeout had to be added because the writePassword function was running before the icon could change on the dom. 
+// Add event listener to generate button. 
 generateBtn.addEventListener("click", function () {
+  //Hides copy button if visible
+  document.getElementById("copy-btn").style.visibility="hidden";
+  //Calls checkIcon function to check icon classes
   checkIcon();
+  //Waits 1ms before calling the writePassword function. Timeout had to be added because the writePassword function was running before the icon could change on the dom. 
   setTimeout(() => { writePassword() }, 1);
 })
 
+//Function to copy generated password to clipboard
 function copyPW() {
-  /* Get the text field */
+  //Get the text field
   var copyText = document.getElementById("password");
-
-  /* Select the text field */
+  //Select the text field 
   copyText.select();
   copyText.setSelectionRange(0, 99999); /*For mobile devices*/
-
-  /* Copy the text inside the text field */
+  //Copy the text inside the text field
   document.execCommand("copy");
-
-  /* Alert the copied text */
-  alert("New Password Copied " + copyText.value);
+  //Alert the copied text
+  alert("New password copied ");
 }
