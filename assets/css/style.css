@@ -48,14 +48,47 @@ header {
   box-shadow: 0 0 10px #696969;
   position: relative;
 }
+.card-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
 
+#lock {
+  margin-right: 5px;
+  vertical-align: -1px;
+  opacity: .3;
+}
 
-.card-header::after {
+.copy-Btn {
+  border: 1px solid rgba(0, 0, 0, .3) ;
+  border-radius: 5px;
+  font-family: inherit;
+  background-color: inherit;
+  padding: 0px 10px;
+  height: 30px;
+  font-size: 16px;
+  font-weight: 200;
+  font-style: italic;
+}
+
+#copy-icon {
+  margin-left: 7px;
+  vertical-align: -1px;
+  opacity: .3;
+}
+
+.copy-Btn:hover{
+  cursor: pointer;
+}
+.card-body::before {
   content: " ";
   display: block;
   width: 100%;
   background: #e7e9eb;
   height: 2px;
+ 
 }
 
 .card-body {
@@ -72,12 +105,6 @@ header {
   width: 100%;
   background: #e7e9eb;
   height: 2px;
-}
-
-.card-header i {
-  margin-right: 5px;
-  vertical-align: -1px;
-  opacity: .3;
 }
 
 .card-footer::after {
@@ -112,10 +139,6 @@ header {
 button[disabled] {
   cursor: default;
   background: #c0c7cf;
-}
-
-.float-right {
-  float: right;
 }
 
 .ipad-Button{

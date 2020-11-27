@@ -148,3 +148,18 @@ generateBtn.addEventListener("click", function () {
   checkIcon();
   setTimeout(() => { writePassword() }, 1);
 })
+
+function copyPW() {
+  /* Get the text field */
+  var copyText = document.getElementById("password");
+
+  /* Select the text field */
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+
+  /* Copy the text inside the text field */
+  document.execCommand("copy");
+
+  /* Alert the copied text */
+  alert("New Password Copied " + copyText.value);
+}
