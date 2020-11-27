@@ -24,7 +24,7 @@ body {
   padding-left: 20px;
   padding-right: 20px;
   margin: 0 auto;
-  
+  position: relative;
 }
 
 header {
@@ -48,6 +48,7 @@ header {
   box-shadow: 0 0 10px #696969;
   position: relative;
 }
+
 
 .card-header::after {
   content: " ";
@@ -73,6 +74,12 @@ header {
   height: 2px;
 }
 
+.card-header i {
+  margin-right: 5px;
+  vertical-align: -1px;
+  opacity: .3;
+}
+
 .card-footer::after {
   content: " ";
   display: block;
@@ -93,6 +100,13 @@ header {
   padding: 14px 34px;
   text-align: center;
   cursor: pointer;
+  position: relative;
+  z-index: 10;
+}
+
+.btn:hover {
+  background-color: hsl(0, 100%, 46%);
+  box-shadow: 0 0 7px #808080;
 }
 
 button[disabled] {
@@ -158,7 +172,7 @@ button[disabled] {
   
 }
 
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   .card {
     border-bottom: 30px solid black;
     border-radius: 20px;
@@ -166,6 +180,7 @@ button[disabled] {
     margin: 0 auto;
     height: 32rem;
   }
+
   
   .card-header h2{
     text-align: center;
@@ -174,7 +189,7 @@ button[disabled] {
 
   .btn {
     font-size: 1rem;
-    /* margin: 16px 0px 0px 0px; */
+    margin: 16px 0px 0px 0px;
     margin-top: 6rem;
     padding: 10px 15px;
   }
@@ -204,10 +219,10 @@ button[disabled] {
   .btn {
     font-size: 0.8rem;
   }
-}
 
 @media (max-height: 415px){
   .btn {
       margin-top: 4rem;
   }
+  
 }
