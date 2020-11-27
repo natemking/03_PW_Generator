@@ -1,5 +1,13 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
+var closeLock = document.getElementById("icon");
+
+function checkIcon() {
+  if (!closeLock.classList.contains("fa-unlock-alt")){
+    closeLock.classList.remove("fa-lock");
+    closeLock.classList.add("fa-unlock-alt", "fa-lock");
+  }
+}
 
 // Write password to the #password input
 function writePassword() {
@@ -8,6 +16,12 @@ function writePassword() {
 
   passwordText.value = password;
 
+  //toggles fontawesome icon in card header
+  // var closeLock = document.getElementById("icon");
+
+  
+  closeLock.classList.toggle("fa-unlock-alt");
+  
 }
 //*** ALL CODE BELOW ADDED BY NATE KING ***//
 //-----------------------------------------//
@@ -126,5 +140,8 @@ function generatePassword() {
   } return password.join('');
 }
 
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+// Add event listener to generate button. Checks for icon status then pauses before running the writePassword function. Timeout had to be added because the writePassword function was running before the icon could change on the dom. 
+generateBtn.addEventListener("click", function(){
+  checkIcon();
+  setTimeout(() => {writePassword()}, 1);
+})

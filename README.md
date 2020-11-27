@@ -32,3 +32,8 @@ https://www.w3schools.com/jsref/jsref_isinteger.asp#:~:text=The%20Number.,Otherw
 
 
 <!-- https://stackoverflow.com/questions/12699210/background-square-with-one-side-at-an-angle -->
+
+<!-- class toggle
+https://www.w3schools.com/howto/howto_js_toggle_class.asp -->
+
+<!-- https://attacomsian.com/blog/javascript-add-remove-toggle-css-classes -->
