@@ -219,10 +219,10 @@ button[disabled] {
   .btn {
     font-size: 0.8rem;
   }
+}
 
 @media (max-height: 415px){
   .btn {
       margin-top: 4rem;
   }
-  
 }

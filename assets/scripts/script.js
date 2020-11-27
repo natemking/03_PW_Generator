@@ -2,8 +2,10 @@
 var generateBtn = document.querySelector("#generate");
 var closeLock = document.getElementById("icon");
 
+//*** checkIcon function added by Nate King ***//
+//Check to see is the icon is a closed lock. If it is closed, it is changed to an open lock right before the writePassword function is called.
 function checkIcon() {
-  if (!closeLock.classList.contains("fa-unlock-alt")){
+  if (!closeLock.classList.contains("fa-unlock-alt")) {
     closeLock.classList.remove("fa-lock");
     closeLock.classList.add("fa-unlock-alt", "fa-lock");
   }
@@ -16,15 +18,13 @@ function writePassword() {
 
   passwordText.value = password;
 
-  //toggles fontawesome icon in card header
-  // var closeLock = document.getElementById("icon");
+  //*** ALL CODE BELOW ADDED BY NATE KING ***//
+  //-----------------------------------------//
 
-  
+  //Toggles FontAwesome icon to a closed lock in card header after the password is generated.
   closeLock.classList.toggle("fa-unlock-alt");
-  
 }
-//*** ALL CODE BELOW ADDED BY NATE KING ***//
-//-----------------------------------------//
+
 
 function generatePassword() {
   //Prompt user for password length. Must be 8-128 characters. 
@@ -33,8 +33,8 @@ function generatePassword() {
   if (pwLength < 8 || pwLength > 128) {
     alert("Please try again and choose a number between 8 and 128");
     return "Try again";
-  //if user chooses a letter they are alerted and the function ceases running.
-  }else if (!Number.isInteger(pwLength)){
+    //if user chooses a letter they are alerted and the function ceases running.
+  } else if (!Number.isInteger(pwLength)) {
     alert("Please choose a number");
     return "Try Again";
   }
@@ -141,7 +141,7 @@ function generatePassword() {
 }
 
 // Add event listener to generate button. Checks for icon status then pauses before running the writePassword function. Timeout had to be added because the writePassword function was running before the icon could change on the dom. 
-generateBtn.addEventListener("click", function(){
+generateBtn.addEventListener("click", function () {
   checkIcon();
-  setTimeout(() => {writePassword()}, 1);
+  setTimeout(() => { writePassword() }, 1);
 })
