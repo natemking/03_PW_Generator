@@ -2,7 +2,10 @@
 var generateBtn = document.querySelector("#generate");
 var closeLock = document.getElementById("lock-icon");
 
-//*** checkIcon function added by Nate King ***//
+//Clear out any text left in textarea. 
+function clearBox() {
+  document.getElementById("password").value = "";
+}
 //Check to see is the icon is a closed lock. If it is closed, it is changed to an open lock right before the writePassword function is called.
 function checkIcon() {
   if (!closeLock.classList.contains("fa-unlock-alt")) {
@@ -144,6 +147,8 @@ function generatePassword() {
 
 // Add event listener to generate button. 
 generateBtn.addEventListener("click", function () {
+  //Calls clearBox function to clear out any passwords left in textarea
+  clearBox();
   //Hides copy button if visible
   document.getElementById("copy-btn").style.visibility="hidden";
   //Calls checkIcon function to check icon classes

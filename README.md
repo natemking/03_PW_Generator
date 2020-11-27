@@ -37,3 +37,9 @@ https://www.w3schools.com/jsref/jsref_isinteger.asp#:~:text=The%20Number.,Otherw
 https://www.w3schools.com/howto/howto_js_toggle_class.asp -->
 
 <!-- https://attacomsian.com/blog/javascript-add-remove-toggle-css-classes -->
+
+<!-- use js to make css elemnets hidden or visable:
+https://stackoverflow.com/questions/8557119/making-a-button-invisible-by-clicking-another-button-in-html
+
+how to copy text to clipboard w/ JS 
+https://www.w3schools.com/howto/howto_js_copy_clipboard.asp -->
