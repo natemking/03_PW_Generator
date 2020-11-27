@@ -21,8 +21,11 @@ function writePassword() {
   //*** ALL CODE BELOW ADDED BY NATE KING ***//
   //-----------------------------------------//
 
-  //Toggles FontAwesome icon to a closed lock in card header after the password is generated.
-  closeLock.classList.toggle("fa-unlock-alt");
+  //If a pw is actually generated the FontAwesome icon is toggled to be a closed lock otherwise is stays open until a proper pw is generated. 
+  if (passwordText.value !== "Try Again"){
+    closeLock.classList.toggle("fa-unlock-alt");
+  }
+
 }
 
 
