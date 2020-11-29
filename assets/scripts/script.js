@@ -145,18 +145,6 @@ function generatePassword() {
   } return password.join('');
 }
 
-// Add event listener to generate button. 
-generateBtn.addEventListener("click", function () {
-  //Calls clearBox function to clear out any passwords left in textarea
-  clearBox();
-  //Hides copy button if visible
-  document.getElementById("copy-btn").style.visibility="hidden";
-  //Calls checkIcon function to check icon classes
-  checkIcon();
-  //Waits 1ms before calling the writePassword function. Timeout had to be added because the writePassword function was running before the icon could change on the dom. 
-  setTimeout(() => { writePassword() }, 1);
-})
-
 //Function to copy generated password to clipboard
 function copyPW() {
   //Get the text field
@@ -169,3 +157,18 @@ function copyPW() {
   //Alert the copied text
   alert("New password copied ");
 }
+
+
+// Add event listener to generate button. 
+generateBtn.addEventListener("click", function () {
+  //Calls clearBox function to clear out any passwords left in textarea
+  clearBox();
+  //Hides copy button if visible
+  document.getElementById("copy-btn").style.visibility="hidden";
+  //Calls checkIcon function to check icon classes
+  checkIcon();
+  //Waits 1ms before calling the writePassword function. Timeout had to be added because the writePassword function was running before the icon could change on the dom. 
+  setTimeout(() => { writePassword() }, 1);
+})
+
+
