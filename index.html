@@ -11,16 +11,16 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
-    <main class="wrapper">
+    <main class="laptop">
 
      
-      <section class="card">
-        <section class="card-header">
+      <section class="screen">
+        <section class="screen-header">
           <h2><i class="fa fa-unlock-alt fa-lock" id="lock-icon" aria-hidden="true"></i>Password Generator</h2>
           <!-- The button used to copy the text -->
           <button id="copy-btn" onclick="copyPW()">copy<i class="fa fa-clipboard" id="copy-icon" aria-hidden="true"></i></button>
         </section>
-        <section class="card-body">
+        <section class="screen-body">
           <textarea
             readonly
             id="password"
@@ -28,10 +28,10 @@
             aria-label="Generated Password"
           ></textarea>
         </section>
-        <section class="card-footer">
-          <button id="generate" class="btn">Generate</button>
+        <section class="screen-footer">
+          <button id="generate" class="btn" enabled>Generate</button>
         </section>
-        <section class="ipad-Button"></section>
+        <section class="tablet-btn"></section>
       </section>
 
       <section class="mac-bottom">

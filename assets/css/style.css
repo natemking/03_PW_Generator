@@ -1,3 +1,4 @@
+/*** Global ***/
 *,
 *::before,
 *::after {
@@ -6,19 +7,19 @@
 
 html,
 body,
-.wrapper {
+.laptop {
   height: 100%;
   margin: 0;
   padding: 0;
-  background-image: url("../../assets/images/white-waves.png");
 }
 
 body {
   font-family: 'Exo 2', sans-serif;
-  background-color: #f9fbfd;
+  background-image: url("../../assets/images/white-waves.png");
 }
 
-.wrapper {
+/*** Laptop ***/
+.laptop {
   max-width: 1070px;
   padding-top: 30px;
   padding-left: 20px;
@@ -27,14 +28,8 @@ body {
   position: relative;
 }
 
-header {
-  text-align: center;
-  padding: 20px;
-  padding-top: 0px;
-  color: hsl(206, 17%, 28%);
-}
-
-.card {
+/*** Laptop Screen ***/
+.screen {
   background-color: hsl(208, 100%, 98%);
   border: black solid 30px;
   border-bottom: 20px solid black;
@@ -48,7 +43,7 @@ header {
   box-shadow: 0 0 10px #696969;
   position: relative;
 }
-.card-header {
+.screen-header {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -83,7 +78,8 @@ header {
   cursor: pointer;
   box-shadow: 0 0 1px #808080;
 }
-.card-body::before {
+
+.screen-body::before {
   content: " ";
   display: block;
   width: 100%;
@@ -91,60 +87,11 @@ header {
   height: 2px;
 }
 
-.card-body {
+.screen-body {
   min-height: 100px;
 }
 
-.card-footer {
-  text-align: center;
-}
-
-.card-footer::before {
-  content: " ";
-  display: block;
-  width: 100%;
-  background: #e7e9eb;
-  height: 2px;
-}
-
-.card-footer::after {
-  content: " ";
-  display: block;
-  clear: both;
-}
-
-.btn {
-  border: none;
-  background-color: hsl(360, 91%, 36%);
-  border-radius: 25px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
-    0px;
-  color: hsl(0, 0%, 100%);
-  display: inline-block;
-  font-size: 22px;
-  line-height: 22px;
-  margin: 16px 16px 16px 20px;
-  padding: 14px 34px;
-  text-align: center;
-  cursor: pointer;
-  position: relative;
-  z-index: 10;
-}
-
-.btn:hover {
-  background-color: hsl(0, 100%, 46%);
-  box-shadow: 0 0 7px #808080;
-}
-
-button[disabled] {
-  cursor: default;
-  background: #c0c7cf;
-}
-
-.ipad-Button{
-  visibility: hidden;
-}
-
+/*** Password text area ***/
 #password {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -168,6 +115,53 @@ button[disabled] {
   font-weight: 100;
 }
 
+.screen-footer {
+  text-align: center;
+}
+
+.screen-footer::before {
+  content: " ";
+  display: block;
+  width: 100%;
+  background: #e7e9eb;
+  height: 2px;
+}
+
+/*** Generate button ***/
+.btn {
+  border: none;
+  background-color: hsl(360, 91%, 36%);
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
+    0px;
+  color: hsl(0, 0%, 100%);
+  display: inline-block;
+  font-size: 22px;
+  line-height: 22px;
+  margin: 16px 16px 16px 20px;
+  padding: 14px 34px;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  z-index: 10;
+}
+
+.btn:hover[enabled] {
+  background-color: hsl(0, 100%, 46%);
+  box-shadow: 0 0 7px #808080;
+}
+
+button[disabled] {
+  cursor: default;
+  background: #c0c7cf;
+}
+
+/*** Tablet Button default hidden ***/
+.tablet-btn{
+  visibility: hidden;
+}
+
+/*** Laptop body ***/
 .box1 {
   margin: 0 auto;
   max-width: 1030px;
@@ -195,8 +189,13 @@ button[disabled] {
   
 }
 
+/*--------------------*/
+/*** Responsiveness ***/
+/*--------------------*/
+
+/*** Tablet size screens ***/
 @media (max-width: 769px) {
-  .card {
+  .screen {
     border-bottom: 30px solid black;
     border-radius: 20px;
     padding: 30px 10px 20px 10px;
@@ -204,10 +203,12 @@ button[disabled] {
     height: 32rem;
   }
 
-  
-  .card-header h2{
-    text-align: center;
-    font-size: 4vw;
+  .screen-header h2{
+    font-size: 3vw;
+  }
+
+  #password {
+    font-size: 1rem;
   }
 
   .btn {
@@ -216,16 +217,12 @@ button[disabled] {
     margin-top: 6rem;
     padding: 10px 15px;
   }
-
-  #password {
-    font-size: 1rem;
-  }
-
+  /*** Changes look of laptop to tablet ***/
   .mac-bottom {
     visibility: hidden;
   }
 
-  .ipad-Button{
+  .tablet-btn{
     visibility: visible;
     height: 20px;
     width: 20px;
@@ -238,14 +235,16 @@ button[disabled] {
   }
 }
 
+/*** Mobile size screens ***/
 @media (max-width: 500px) {
-  .btn {
-    font-size: 0.8rem;
-  }
-  .copy-Btn{
+  #copy-btn{
     font-size: 10px;
     margin: 0; 
     padding: 2px 5px;   
+  }
+  
+  .btn {
+    font-size: 0.8rem;
   }
 }
 
