@@ -170,6 +170,6 @@ generateBtn.addEventListener("click", function () {
   checkIcon();
   //Waits 1ms before calling the writePassword function. Timeout had to be added because the writePassword function was running before the icon could change on the dom. 
   setTimeout(() => { writePassword() }, 1);
-})
+});
 
 
