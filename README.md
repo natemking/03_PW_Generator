@@ -9,7 +9,7 @@ https://www.natemking.dev/pw_generator/
     + [Scope of Work](#scope-of-work)
     + [Javascript functionality](#javascript-functionality)
     + [HTML and CSS](#html-and-css)
-    + [Reactive Elements w/ JavaScript](#reactive-elements)
+    + [Reactive Elements](#reactive-elements)
     + [In Summary](#in-summary)
   * [Screenshots](#screenshots)
   * [Credits](#credits)
