@@ -1,6 +1,6 @@
 # Password Generator
 ## Homework Assignment #3 - Javascript: Password Generator
-* [https://www.natemking.dev/pw_generator/](https://www.natemking.dev/pw_generator/){:target="_blank"}
+https://www.natemking.dev/pw_generator/
 
 ---
 
