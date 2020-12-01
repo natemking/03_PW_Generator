@@ -7,9 +7,9 @@ http://www.natemking.dev/pw_generator/
 ## Table of Contents
  * [Description](#description)
     + [Scope of Work](#scope-of-work)
-    + [The Javascript functionality](#javascript-functionality)
-    + [The HTML and CSS](#html-and-css)
-    + [Reactive Elements w/ JavaScript](#reactive-elements-w--javascript)
+    + [Javascript functionality](#javascript-functionality)
+    + [HTML and CSS](#html-and-css)
+    + [Reactive Elements w/ JavaScript](#reactive-elements)
     + [In Summary](#in-summary)
   * [Screenshots](#screenshots)
   * [Credits](#credits)
@@ -33,7 +33,7 @@ At first, I began by looking for a background image. I stumbled upon a simple lo
 
 I was happy with the aesthetics yet the design needed more...
 
-### Reactive Elements w/ JavaScript
+### Reactive Elements
 I added an icon of an open lock to the header but that was not enough. I thought it would be more interesting that if when the password was generated the icon changed to a closed lock. I was able to accomplish this by adding a `.classList.toggle()` method within the main `writePassword()` function executing immediately after the password is displayed. This all proved to be extremely challenging to get right due to the nature of how the toggle was working. After a while of struggling, I realized that the toggle was not working due to the order the FontAwesome classes were ordering themselves in the icon tag when `.classList.toggle()` was called. I ended up writing a function called `checkIcon()` that contains an if statement that is called before the `writePassword()` function when the generate button is clicked. `checkIcon()` says "if the icon class does not have the open lock then remove the closed lock and add the opened and closed lock, in that order." Then when the app is finished running, the icon changes from an open lock to a closed one. Thanks to the `checkIcon()` function the lock will return to an open icon every button click. Unfortunately, the generated password would appear before the icons could change. I had to add a timeout of 1ms to the calling of the `writePassword()` function to resolve this issue. Lastly, the icons will not toggle to a closed lock if the users criteria returns 'Try Again'. 
 
 I then decided it would be a benefit to the user if they had a button that would copy the output of the password to their clipboard. I was able to find a simple function on W3 schools that allowed for the output to be copied then posts an alert to let the user know the data is copied. I designed a simple button that is hidden until the password is generated. I added to the generate button click event listener the command to hide the copy button if the user decides to generate a different password without refreshing the page, giving a cleaner look to the app.
