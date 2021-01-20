@@ -121,3 +121,9 @@ _after password generated_
 * [W3 Schools tutorial on how to get JavaScript to copy to users clipboard](https://www.w3schools.com/howto/howto_js_copy_clipboard.asp)
 
 * [Stack Oveflow post on how to clear a `<textarea>` on button clic](https://stackoverflow.com/questions/15968911/how-to-clear-text-area-with-a-button-in-html-using-javascript)
+
+---
+
+GitHub: [@natemking](https://github.com/natemking/)
+
+Email: [natmeking@gmail.com](mailto:natmeking@gmail.com)
